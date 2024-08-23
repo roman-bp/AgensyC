@@ -2,7 +2,11 @@
     {
         "id": "1",
         "name": "1к хрещатик 23",
-        "image": "images/1кKrechatic.jpeg", 
+        "images": [
+            "images/1кKrechatic1.jpeg",
+            "images/1кKrechatic2.jpeg",
+            "images/1кKrechatic3.jpeg"
+        ],
         "category": "1к",
         "price": "1000 грн",
         "description": "високий стілець."
@@ -10,7 +14,11 @@
     {
         "id": "2",
         "name": "2к хрещатик 14",
-        "image": "images/2кKreschatic.jpeg",  
+        "images": [
+            "images/2кKreschatic1.jpeg",
+            "images/2кKreschatic2.jpeg",
+            "images/2кKreschatic3.jpeg"
+        ],
         "category": "2к",
         "price": "2000 грн",
         "description": "супер квартира."
@@ -18,7 +26,11 @@
     {
         "id": "3",
         "name": "3к хрещатик 1",
-        "image": "images/3kKreschatic.jpeg",  
+        "images": [
+            "images/3kKreschatic1.jpeg",
+            "images/3kKreschatic2.jpeg",
+            "images/3kKreschatic3.jpeg"
+        ],
         "category": "3к",
         "price": "4000 грн",
         "description": "ШИК."

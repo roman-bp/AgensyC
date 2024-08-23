@@ -210,12 +210,23 @@ document.addEventListener('DOMContentLoaded', function() {
             const productCard = document.createElement('div');
             productCard.className = 'product-card';
             productCard.innerHTML = `
-                <img src="${product.image}" alt="${product.name}">
+                <div class="product-slider">
+                    ${product.images.map(image => `<div><img src="${image}" alt="${product.name}"></div>`).join('')}
+                </div>
                 <h3>${product.name}</h3>
                 <p>${product.price}</p>
                 <button class="add-to-cart" data-id="${product.id}">Хочу перегляд об'екту</button>
             `;
             productGrid.appendChild(productCard);
+        });
+
+        // Ініціалізація каруселі для всіх слайдерів після додавання карток на сторінку
+        $('.product-slider').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 1,
+            adaptiveHeight: true
         });
     }
 
@@ -231,3 +242,4 @@ window.addEventListener('click', (event) => {
         toggleCartModal(event);
     }
 });
+s
