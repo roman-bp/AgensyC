@@ -107,6 +107,7 @@ footer {
     margin: 0 auto;
     display: flex;
     flex-direction: column; /* Всі поля форми йдуть вертикально */
+    gap: 15px; /* Додаємо проміжок між елементами */
 }
 
 .contact-form h2 {
@@ -117,25 +118,52 @@ footer {
 }
 
 .contact-form label {
-    display: block;
-    margin-bottom: 8px;
     font-size: 1em;
     color: #666;
+}
+
+.contact-form .form-group {
+    display: flex;
+    flex-direction: column; /* Кожна пара label та input розташовується вертикально */
+    gap: 8px; /* Додаємо невеликий проміжок між label і input */
 }
 
 .contact-form input, 
 .contact-form textarea {
     width: 100%;
     padding: 12px;
-    margin-bottom: 15px;
     border: 1px solid #ddd;
     border-radius: 4px;
     font-size: 1em;
     box-sizing: border-box;
 }
 
-.contact-form textarea {
-    resize: vertical;
+/* Стилі для блоку customer-details */
+.customer-details {
+    display: flex;
+    flex-direction: column; /* Розміщуємо елементи вертикально */
+    gap: 9px; /* Додаємо відступ між полями */
+    margin-bottom: 20px; /* Відступ знизу для відокремлення від інших елементів */
+}
+
+.customer-details .form-group {
+    display: flex;
+    flex-direction: column; /* Кожна пара label та input вертикально */
+    gap: 10px; /* Додаємо невеликий проміжок між label і input */
+}
+
+.customer-details label {
+    font-size: 1em;
+    color: #666;
+}
+
+.customer-details input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
 }
 
 .add-to-cart {
@@ -153,6 +181,7 @@ footer {
     background-color: #e64a19;
 }
 
+/* Модальне вікно з Flexbox */
 .cart-modal {
     display: none;
     position: fixed;
@@ -174,16 +203,17 @@ footer {
     width: 100%;
     position: relative;
     box-sizing: border-box;
-    display: flex;                /* Додаємо Flexbox */
-    flex-direction: column;       /* Елементи розташовані вертикально */
-    align-items: center;          /* Вирівнюємо елементи по центру */
-    justify-content: space-between; /* Розподіляємо простір між елементами */
+    display: flex; /* Використовуємо Flexbox для розміщення елементів */
+    flex-direction: column; /* Розміщуємо елементи вертикально */
+    align-items: stretch; /* Розтягуємо елементи на всю ширину */
+    justify-content: flex-start; /* Починаємо розташування з верхньої частини */
+    gap: 20px; /* Додаємо проміжок між елементами */
 }
-
 
 .cart-modal-content h2 {
     margin-top: 0;
     font-size: 1.5em;
+    text-align: center; /* Вирівнювання заголовка по центру */
 }
 
 .cart-modal-content .close {
