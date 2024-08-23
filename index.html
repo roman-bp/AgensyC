@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Агенція Нерухомості</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Головна</a></li>               
+                <li><a href="info.html">Про нас</a></li>
+                <li><a href="contacts.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Агенція Нерухомості</h1>
+            <p>створюємо ваше майбутне</p>
+            <a href="#" class="btn" onclick="toggleCartModal(event)">Замовити перегляд (0)</a>
+        </section>
+
+        <section class="filters">
+            <h2>Фільтри</h2>
+            <div class="filter-group">
+                <label for="category">Категорія:</label>
+                <select id="category">
+                    <option value="all">Усі</option>
+                    <option value="1к">1-кімнатні</option>
+                    <option value="2к">2-кімнатні</option>
+                    <option value="3к">3-кімнатні</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label for="sort">Сортувати за:</label>
+                <select id="sort">
+                    <option value="price-asc">Ціною (зростання)</option>
+                    <option value="price-desc">Ціною (спадання)</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="products">
+            <h2>що ми Вам пропонуємо</h2>
+            <div class="product-grid" id="product-grid">
+                <!-- Тут будуть динамічно додаватися картки товарів -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Напишіть нам: info@example.com</p>
+    </footer>
+
+    <!-- Модальне вікно кошика -->
+    <div id="cart-modal" class="cart-modal">
+        <div class="cart-modal-content">
+            <span class="close" onclick="toggleCartModal(event)">&times;</span>
+            <h2>заявка на перегляд</h2>
+            <div id="cart-items"></div>
+          
+
+            <!-- Нові поля -->
+            <div class="customer-details">
+                <label for="customer-name">Ім'я:</label>
+                <input type="text" id="customer-name" required>
+
+                <label for="customer-address">Адреса:</label>
+                <input type="text" id="customer-address" required>
+
+                <label for="customer-phone">Телефон:</label>
+                <input type="text" id="customer-phone" required>
+            </div>
+
+            <button id="checkout" class="btn" onclick="checkout()">Оформити замовлення</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+   
+</body>
+</html>
