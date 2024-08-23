@@ -20,7 +20,7 @@
     --filter-border-radius: 8px;
     --filter-shadow-color: rgba(0, 0, 0, 0.1);
     --modal-background-color: rgba(0, 0, 0, 0.5);
-    --modal-content-background-color: white;
+    --modal-content-background-color: rgb(254, 253, 253);
 }
 
 /* Основные стили */
